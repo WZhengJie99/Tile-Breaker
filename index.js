@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 let squares = [];
 
 function getGradientColor(size) {
-    const maxIntensity = 1000;
+    const maxIntensity = 300;
     const intensity = Math.floor(maxIntensity * (size / canvas.width));
     return `rgb(${intensity}, ${255 - intensity}, ${255 - intensity / 2})`;
 }
