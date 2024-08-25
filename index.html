@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Breaker</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #by {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #by a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        #by a:hover {
+            text-decoration: underline;
+        }
+
+        .x-symbol {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <div id="by">Made by: 
+        <a href="https://github.com/WZhengJie99" id="github">Wong Zheng Jie</a>
+        <a href="https://twitter.com/WZJ_99_" id="x"><span class="x-symbol">X</span>: WZJ_99_</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
