@@ -8,7 +8,8 @@ let squares = [];
 
 function getGradientColor(size) {
     const maxIntensity = 300;
-    const intensity = Math.floor(maxIntensity * (size / canvas.width));
+    const fixedCanvasWidth = 1000;
+    const intensity = Math.floor(maxIntensity * (size / fixedCanvasWidth));
     return `rgb(${intensity}, ${255 - intensity}, ${255 - intensity / 2})`;
 }
 
@@ -20,7 +21,13 @@ function initializeSquares() {
     const initialSize = 100;
     for (let y = 0; y < canvas.height; y += initialSize) {
         for (let x = 0; x < canvas.width; x += initialSize) {
-            squares.push(createSquare(x, y, initialSize));
+            const square = createSquare(x, y, initialSize);
+            squares.push(square);
+
+            // color debug
+            if (x === 0 && y === 0) {
+                console.log('Initial tile color:', square.color);
+            }
         }
     }
 }
